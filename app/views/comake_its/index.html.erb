@@ -1,0 +1,31 @@
+<h1>Listing comake_its</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comake_its.each do |comake_it| %>
+      <tr>
+        <td><%= comake_it.name %></td>
+        <td><%= comake_it.email %></td>
+        <td><%= comake_it.password %></td>
+        <td><%= link_to 'Show', comake_it %></td>
+        <td><%= link_to 'Edit', edit_comake_it_path(comake_it) %></td>
+        <td><%= link_to 'Destroy', comake_it, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comake it', new_comake_it_path %>

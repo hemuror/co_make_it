@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @comake_it.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @comake_it.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @comake_it.password %>
+</p>
+
+<%= link_to 'Edit', edit_comake_it_path(@comake_it) %> |
+<%= link_to 'Back', comake_its_path %>
